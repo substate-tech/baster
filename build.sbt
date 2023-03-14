@@ -42,3 +42,6 @@ publishSite
 
 enablePlugins(GhpagesPlugin)
 git.remoteRepo := "git@github.com:substate-tech/baster.git"
+
+githubOwner := "substate-tech"
+githubRepository := "baster"
