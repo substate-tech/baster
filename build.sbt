@@ -5,7 +5,7 @@
 
 ThisBuild / scalaVersion     := "2.12.13"
 ThisBuild / version          := "0.1.0"
-ThisBuild / organization     := "substate.tech"
+ThisBuild / organization     := "substate"
 
 val chisel3Version = "3.6.0-RC2"
 val chiseltestVersion = "0.6.0-RC2"
@@ -14,7 +14,7 @@ val scalatestVersion = "3.2.15"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "substate.baster",
+    name := "baster",
     libraryDependencies ++= Seq(
       "edu.berkeley.cs" %% "chisel3" % chisel3Version,
       "edu.berkeley.cs" %% "chiseltest" % chiseltestVersion,
