@@ -24,7 +24,7 @@ To use baster, just create your own UnitTester class as follows:
 ```scala
 abstract class MyUnitTester extends BaseUnitTester {...
 ```
-Then write your tests as you would with ChiselTest. However, now that you're using baster you'll have command line access to all the features described in the #Overview above. The features are controlled on the SBT command line in the same way as VCD waveform dump is controlled in ChiselTest e.g.:
+Then write your tests as you would with ChiselTest. However, now that you're using baster you'll have command line access to all the features described in the overview above. The features are controlled on the SBT command line in the same way as VCD waveform dump is controlled in ChiselTest e.g.:
 
 `test -- -DwriteVcd=1`
 
