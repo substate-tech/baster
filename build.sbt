@@ -5,8 +5,9 @@
 
 ThisBuild / scalaVersion     := "2.12.13"
 ThisBuild / version          := "0.1.0"
-ThisBuild / organization     := "substate"
+ThisBuild / organization     := "io.github.substate-tech"
 
+// Library dependencies
 val chisel3Version = "3.6.0-RC2"
 val chiseltestVersion = "0.6.0-RC2"
 val chiselVerifyVersion = "0.2.0"
@@ -42,6 +43,3 @@ publishSite
 
 enablePlugins(GhpagesPlugin)
 git.remoteRepo := "git@github.com:substate-tech/baster.git"
-
-githubOwner := "substate-tech"
-githubRepository := "baster"
