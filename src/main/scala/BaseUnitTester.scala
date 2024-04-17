@@ -9,7 +9,7 @@ import chiseltest._
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.{BeforeAndAfterAllConfigMap, ConfigMap}
 import chiseltest.simulator.VerilatorFlags
-import firrtl.AnnotationSeq
+import firrtl2.AnnotationSeq
 
 /** =Unit Tester Base Trait=
   */

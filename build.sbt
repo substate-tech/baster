@@ -3,28 +3,26 @@
 //coverageEnabled := true
 //logBuffered in Test := false
 
-ThisBuild / scalaVersion     := "2.12.13"
+ThisBuild / scalaVersion     := "2.13.12"
 ThisBuild / version          := "0.1.0"
 ThisBuild / organization     := "io.github.substate-tech"
 
 // Library dependencies
-val chisel3Version = "3.6.0-RC2"
-val chiseltestVersion = "0.6.0-RC2"
-val chiselVerifyVersion = "0.2.0"
-val scalatestVersion = "3.2.15"
+val chiselVersion = "6.0.0"
+val chiseltestVersion = "6.0.0"
+val scalatestVersion = "3.2.16"
 
 lazy val root = (project in file("."))
   .settings(
     name := "baster",
     libraryDependencies ++= Seq(
-      "edu.berkeley.cs" %% "chisel3" % chisel3Version,
+      "org.chipsalliance" %% "chisel" % chiselVersion,
       "edu.berkeley.cs" %% "chiseltest" % chiseltestVersion,
-      "io.github.chiselverify" % "chiselverify" % chiselVerifyVersion,
       "org.scalatest" %% "scalatest" % scalatestVersion,
       "org.scala-lang" % "scala-reflect" % scalaVersion.value
     ),
     scalacOptions ++= Seq(
-      "-Xsource:2.11",
+      "-Xsource:2.13",
       "-language:reflectiveCalls",
       "-deprecation",
       "-feature",
@@ -34,8 +32,7 @@ lazy val root = (project in file("."))
       // do not warn about firrtl deprecations
       "-Wconf:cat=deprecation&msg=will not be supported as part of the migration to the MLIR-based FIRRTL Compiler:s"
     ),
-    addCompilerPlugin("edu.berkeley.cs" % "chisel3-plugin" % chisel3Version cross CrossVersion.full),
-    addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full)
+    addCompilerPlugin("org.chipsalliance" % "chisel-plugin" % chiselVersion cross CrossVersion.full)
   )
 
 enablePlugins(SiteScaladocPlugin)
